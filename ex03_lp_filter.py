@@ -2,18 +2,9 @@ import numpy as np
 from scipy.io import wavfile
 from scipy import signal
 import os
-import matplotlib.pyplot as plt
 
-os.chdir("D:\KBAudio")
+os.chdir("C:\KBAudio")
 fs, audio = wavfile.read('test2.wav')
-
-step_size = 1./fs
-
-spectrum = np.fft.rfft(audio)
-freqs = np.fft.rfftfreq(len(audio),step_size)
-
-plt.plot(freqs,abs(spectrum))
-
 
 passband = 10000. #Hz
 stopband= 11000.

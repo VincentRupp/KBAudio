@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="/static/css/bootstrap.css">
+        <link rel="stylesheet" type="text/css" href="/static/css/styles.css">
+    {% if title %}
+    <title>{{ title }}</title>
+    {% else %}
+    <title>It's good to hear your voice</title>
+    {% endif %}
+    </head>
+    <body>
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <div>
+                <ul class="nav navbar-nav">
+                    <li><a href="/index">Home</a></li>
+                    <li><a href="/cats">A cat</a></li>
+                    <li><a href="/about">About</a></li>
+                </ul>
+                </div>
+            </div>
+        </nav>
+        {% block garbage %}{% endblock %}
+        {% block content %}{% endblock %}
+    </body>
+</html>

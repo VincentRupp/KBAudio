@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block garbage %}
+<div class="wrapper topquote"><h4>It's so good to hear your voice</h4></div>
+{% endblock %}
+{% block content %}
+    <div class="container-fluid">
+        <h3 style="text-align:center">Hello, {{ user.nickname }}</h3>
+        {% for choice in choices %}
+        <div class="imagebox">{{ choice.image }}</div>
+        <div class="quotetextbox">{{ choice.quote }}</div>
+        <div class="audiocontrolbox"></div>
+        {% endfor %}
+    </div>
+{% endblock %}
